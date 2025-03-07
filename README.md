@@ -29,9 +29,11 @@ names(layer_params) %>%
     if (is.null(fuzzy_string)) return(NULL)
     file <- fuzzy_read(spatial_dir, fuzzy_string, paste)
     if (is.character(file) && str_detect(file, ".tif$")) {
+      print("reprojecting")
+      writeRaster(project(rast(file), "epsg:3857", method = "mode"), "tmp.tif", overwrite = TRUE)
       print("converting")
       cog <- file.path(cogs_dir, basename(file))
-      gdal_translate_system(file, cog)
+      gdal_translate_system("tmp.tif", cog)
     }
   }
 )
