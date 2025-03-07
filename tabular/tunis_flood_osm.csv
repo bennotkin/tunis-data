@@ -1,0 +1,9 @@
+poi,type,total_pois,pois_in_flood_zone,percentage_in_flood_zone
+police,coastal_2020,83,2,2.4096385542168677
+fire,coastal_2020,8,0,0.0
+police,fluvial_2020,83,2,2.4096385542168677
+fire,fluvial_2020,8,0,0.0
+police,pluvial_2020,83,21,25.301204819277107
+fire,pluvial_2020,8,1,12.5
+police,comb_2020,83,24,28.915662650602407
+fire,comb_2020,8,1,12.5
